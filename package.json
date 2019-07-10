@@ -24,7 +24,10 @@
     "bootstrap": "^4.1.0",
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
+    "ng2-toastr": "^4.1.2",
+    "ng6-toastr": "^6.0.0",
     "rxjs": "^6.0.0-rc.0",
+    "rxjs-compat": "^6.5.2",
     "zone.js": "^0.8.24"
   },
   "devDependencies": {

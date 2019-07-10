@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-
+import {ToastModule} from 'ng6-toastr/ng2-toastr';
 import { AppComponent } from './app.component';
 import { NavComponent } from './elements/nav/nav.component';
 import { JumbotronComponent } from './elements/jumbotron/jumbotron.component';
@@ -37,7 +37,9 @@ import { AuthService } from './auth.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastModule.forRoot()
   ],
   providers: [AuthGuard, AuthService, AlbumsService],
   bootstrap: [AppComponent]

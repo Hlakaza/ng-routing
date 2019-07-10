@@ -8,10 +8,31 @@ import { AlbumListComponent } from './albums/album-list/album-list.component';
 import { SecretComponent } from './pages/secret/secret.component';
 import { AuthGuard } from './auth.guard';
 
+
+const albums = [];
+  albums.push({
+    id: 1,
+    api: 'https://pixabay.com/api/',
+    name: 'Birds',
+    description: 'Photos of birds.',
+    image: 'assets/img/birds.jpeg'
+  }, {
+    id: 2,
+    name: 'Mountains',
+    description: 'Photos of mountains.',
+    image: 'assets/img/mountains.jpeg'
+  }, {
+    id: 3,
+    name: 'Cities',
+    description: 'Photos of cities.',
+    image: 'assets/img/cities.jpeg'
+  });
+
 const routes: Routes = [
   { path: '', redirectTo: '/albums', pathMatch: 'full' },
   {
     path: 'albums',
+    data: { api: 'https://pixabay.com/api/', albums},
     component: AlbumsComponent,
     children: [
       { path: '', component: AlbumListComponent },

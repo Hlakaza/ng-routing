@@ -1,5 +1,4 @@
 import { Injectable, ViewContainerRef } from '@angular/core';
-import { ToastsManager } from 'ng6-toastr';
 
 @Injectable({
   providedIn: 'root'

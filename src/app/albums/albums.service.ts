@@ -5,6 +5,7 @@ import { map, catchError } from 'rxjs/operators';
 
 import { Album } from './album/album';
 import { environment } from '../../environments/environment';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -13,29 +14,34 @@ export class AlbumsService {
 
   private albums: Album[] = [];
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, readonly router: Router) {
+
+    console.log(router.config);
+
+
     this.albums.push({
       id: 1,
       name: 'Birds',
       description: 'Photos of birds.',
       image: 'assets/img/birds.jpeg'
-    });
-
-    this.albums.push({
+    }, {
       id: 2,
       name: 'Mountains',
       description: 'Photos of mountains.',
       image: 'assets/img/mountains.jpeg'
-    });
-
-    this.albums.push({
+    }, {
       id: 3,
       name: 'Cities',
       description: 'Photos of cities.',
       image: 'assets/img/cities.jpeg'
     });
   }
+  analyticsTracking() {
 
+  }
+  tracking(data) {
+   return data.router;
+  }
   /**
    * Get the albums
    */
@@ -57,7 +63,7 @@ export class AlbumsService {
   }
 
   getAlbumPhotos(id: number): Observable<any> {
-    let url = 'https://pixabay.com/api/?image_type=photo&per_page=12&orientation=horizontal';
+    let url = `${environment.api}?image_type=photo&per_page=12&orientation=horizontal'`;
     url += '&key=' + environment.pixabayApiKey;
 
     const album = this.getAlbum(id);

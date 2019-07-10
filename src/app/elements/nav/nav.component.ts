@@ -25,6 +25,12 @@ export class NavComponent implements OnInit {
     this.toast.success('You are logged in!', 'Success!');
   }
 
+  checklogin() {
+    if (!this.authService.loggedIn) {
+       this.toast.error('You need to be loggedin to access this!', 'Login!');
+    }
+  }
+
   onLogout() {
     this.authService.logout();
     this.router.navigate(['/']);

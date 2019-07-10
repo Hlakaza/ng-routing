@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  pixabayApiKey: '5912095-2741abf2dc1b1a7a9fcbc8578'
+  pixabayApiKey: '12998820-2bf5f6652d47c0c1cc365c04c'
 };

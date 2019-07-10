@@ -18,21 +18,21 @@ export class AlbumsService {
       id: 1,
       name: 'Birds',
       description: 'Photos of birds.',
-      image: '/assets/img/birds.jpeg'
+      image: 'assets/img/birds.jpeg'
     });
 
     this.albums.push({
       id: 2,
       name: 'Mountains',
       description: 'Photos of mountains.',
-      image: '/assets/img/mountains.jpeg'
+      image: 'assets/img/mountains.jpeg'
     });
 
     this.albums.push({
       id: 3,
       name: 'Cities',
       description: 'Photos of cities.',
-      image: '/assets/img/cities.jpeg'
+      image: 'assets/img/cities.jpeg'
     });
   }
 

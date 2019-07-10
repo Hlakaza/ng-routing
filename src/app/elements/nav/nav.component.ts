@@ -28,6 +28,6 @@ export class NavComponent implements OnInit {
   onLogout() {
     this.authService.logout();
     this.router.navigate(['/']);
-    this.toast.warning('You are logged out!');
+    this.toast.warning('You are logged out!', 'logOut!');
   }
 }

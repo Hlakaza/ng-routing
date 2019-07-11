@@ -1,4 +1,5 @@
 import { Injectable, ViewContainerRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -6,7 +7,8 @@ import { Injectable, ViewContainerRef } from '@angular/core';
 export class AuthService {
   loggedIn = false;
 
-  constructor() {
+
+  constructor(private router: Router) {
   }
 
   isAuthenticated() {

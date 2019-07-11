@@ -12,7 +12,6 @@ import { AuthGuard } from './auth.guard';
 const albums = [];
   albums.push({
     id: 1,
-    api: 'https://pixabay.com/api/',
     name: 'Birds',
     description: 'Photos of birds.',
     image: 'assets/img/birds.jpeg'
@@ -39,7 +38,7 @@ const routes: Routes = [
       { path: 'view/:id', component: AlbumDetailsComponent, canActivate: [AuthGuard] },
     ]
   },
-  { path: 'about', component: AboutComponent },
+  // { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'secret', component: SecretComponent, canActivate: [AuthGuard] }
 ];
